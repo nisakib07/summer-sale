@@ -16,6 +16,11 @@ function itemNameToCart(cardName, itemPrice) {
   let totalPriceFloat = parseFloat(totalPriceString);
   totalPriceFloat += itemPriceFloat;
 
+  let totalElement = document.getElementById("final-total");
+  let finalTotalString = totalElement.innerText;
+  let finalTotalFloat = parseFloat(finalTotalString);
+  finalTotalFloat += itemPriceFloat;
+
   const applyBtn = document.getElementById("apply-btn");
   if (totalPriceFloat >= 200) {
     applyBtn.removeAttribute("disabled");
@@ -31,4 +36,5 @@ function itemNameToCart(cardName, itemPrice) {
   }
 
   totalPriceElement.innerText = totalPriceFloat.toFixed(2);
+  totalElement.innerText = finalTotalFloat.toFixed(2);
 }

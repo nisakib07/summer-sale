@@ -51,5 +51,5 @@ document.getElementById("apply-btn").addEventListener("click", function () {
 });
 
 document.getElementById("home-btn").addEventListener("click", function () {
-  location.href = "index.html";
+  location.pathname = "/index.html";
 });
