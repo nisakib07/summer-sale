@@ -23,6 +23,8 @@ function itemNameToCart(cardName, itemPrice) {
 
   const applyBtn = document.getElementById("apply-btn");
   if (totalPriceFloat >= 200) {
+    applyBtn.classList.remove("bg-gray-500");
+    applyBtn.classList.add("bg-[#E527B2]");
     applyBtn.removeAttribute("disabled");
   } else {
     applyBtn.setAttribute("disabled", true);
@@ -30,6 +32,8 @@ function itemNameToCart(cardName, itemPrice) {
 
   const purchaseBtn = document.getElementById("purchase-btn");
   if (totalPriceFloat > 0) {
+    purchaseBtn.classList.remove("bg-gray-500");
+    purchaseBtn.classList.add("bg-[#E527B2]");
     purchaseBtn.removeAttribute("disabled");
   } else {
     purchaseBtn.setAttribute("disabled", true);
